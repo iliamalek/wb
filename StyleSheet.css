@@ -1,0 +1,294 @@
+﻿
+*,div,  p {
+    padding:0px;
+    margin: 0px;
+}
+
+a {
+    text-decoration: none;
+    color:#000000;
+}
+
+body {
+    background-image: url(img/bg-khatkhati.png);
+    direction:rtl;
+}
+
+#allpage {
+    width: 100%;
+    height:auto;
+    float:right;
+}
+
+
+
+
+/****************************************************header*/
+
+#header {
+    //background-color: #fff;
+    width: 100%;
+    height: 270px;
+}
+
+#header1 {
+    /*background-color: #6b0707;*/
+    background-color: #3b3030;
+    width: 100%;
+    height: 55px;
+    margin: -9px auto;
+}
+
+#header2 {
+    background-color: #c3c3c3;
+    width: 100%;
+    height: 25px;
+    margin:9px auto;
+}
+
+#header3 {
+    background-image: url(img/bg-khatkhati.png);
+    width: 800px;
+    height: 200px;
+    margin: -50px auto;
+    border-bottom: 2px solid #dddada;
+    border-top: 4px solid #faeeee;
+}
+
+#header3 .cmp {
+    background-color: #ffff;
+    margin: 10px 100px 1px 100px;
+    text-align: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+#header3 .cmp .cmpname {
+    padding: 5px 5px 5px 5px;
+    text-align: center;
+}
+
+#header3 .cmp .cmpimg {
+    background-image: url(img/menu-bala.png);
+    background-repeat: repeat-x;
+    padding: 5px 5px 5px 5px;
+    text-align: center;
+}
+
+#header3 .menu {
+    //background-image: url(img/menu-payin.png);
+    //background-repeat: repeat-x;
+    //background-color: #f2f2f2;
+    //padding: 10px 0px 0px 0px;
+    text-align: center;
+}
+
+
+/****************************************************bdn*/
+
+#bdn {
+    float: right;
+    width: 90%;
+    height: auto;
+    //margin-top: 20px;
+    margin: 10px 60px 10px 60px;
+    background-color: #f2f2f2;
+}
+
+#bdnr {
+    float: right;
+    height: 500px;
+    width: 20%;
+    overflow: scroll;
+    //background: #ffffff;
+    text-align: center;
+}
+
+.bdnrb {
+    text-align: center;
+    background-color: #c3c3c3;
+    width: 97%;
+    height: 20px;
+    border-color: #ffffff;
+    border-style: solid;
+    border-width: 1;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.bdnrv {
+    //background-color: #D9A2B1;
+    background-image: url(img/menu-bala.png);
+    background-repeat: repeat-x;
+    width: 97%;
+    height: auto;
+    //text-align: center;
+    font-size: 17px;
+    /*border-left-color: #D4B9C6;
+    border-left-style: solid;
+    border-left-width: 1;
+    border-right-color: #D4B9C6;
+    border-right-style: solid;
+    border-right-width: 1;*/
+}
+
+.bdnrp {
+    width: 97%;
+    height: 0.1px;
+    text-align:center;
+    //border-left-color: #D4B9C6;
+    //border-left-style: solid;
+    //border-left-width: 1;
+    //border-right-color: #6b0707;
+    //border-right-style: solid;
+    //border-right-width: 1;
+    //border-bottom-color: #6b0707;
+    //border-bottom-style: solid;
+    //border-bottom-width: 1;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+
+#bdnl {
+    float: left;
+    height: 500px;
+    width: 79%;
+    overflow: scroll;
+    margin-right: 10px;
+    background: #ffffff;
+    /*background-image: url(img/menu-bala.png);
+    background-repeat: repeat-x;*/
+}
+
+.bdnlb {
+    text-align: center;
+    background-color: #c3c3c3;
+    width: 99%;
+    height: 20px;
+    border-color: #ffffff;
+    border-style: solid;
+    border-width: 1;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.bdnlv {
+    text-align: center;
+    //background-color: #D9A2B1;
+    width: 99%;
+    height: auto;
+    /*border-left-color: black;
+    border-left-style: solid;
+    border-left-width: 1;
+    border-right-color: black;
+    border-right-style: solid;
+    border-right-width: 1;*/
+}
+
+.bdnlp {
+    text-align: center;
+    width: 99%;
+    height: 0.1px;
+    /*border-left-color: black;
+    border-left-style: solid;
+    border-left-width: 1;
+    border-right-color: black;
+    border-right-style: solid;
+    border-right-width: 1;
+    border-bottom-color: black;
+    border-bottom-style: solid;
+    border-bottom-width: 1;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;*/
+}
+
+
+
+ /****************************************************footer*/
+
+
+#footer {
+    float: right;
+    width: 100%;
+    height: auto;
+    //background-color: #6b0707;
+    margin-top:20px;
+}
+
+#footermnu{
+    float:right;
+    width:100%;
+    height:auto;
+}
+
+#footermnu ul{
+    list-style-type: none;
+}
+
+#footermnu ul li {
+    float: right;
+    display: block;
+    padding: 0px 5px 0px 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+#footermnu ul li:hover{
+    padding-right: 15px;
+}
+
+
+#footermnu ul li a{
+    //text-decoration:none;
+}
+
+#icon {
+    float: right;
+    width: 100%;
+    height: auto;
+    //background-color: #fff;
+}
+
+#icon ul {
+    list-style-type: none;
+}
+
+#icon ul li {
+    float: right;
+    display: block;
+    padding: 5px;
+    //transition: all 0.3s ease-in-out;
+}
+
+#icon ul li a {
+    
+    float: right;
+    //padding:5px;
+    font-size: 20px;
+    background: #ffffff;
+}
+
+/*#icon ul li a:hover {
+    background: #dddada;
+}*/
+
+#footer p{
+    float: right;
+    margin:5px 20px;
+    color:#000000;
+}
+
+.more{
+    background-image:url(img/menu-bala.png);
+    background-repeat:repeat-x;
+    border-radius:6px;
+    border-color:darkgray;
+    border-style:solid;
+    border-width:1px;
+    width:150px;
+    height:40px;
+    line-height:40px;
+    float:left;
+}
