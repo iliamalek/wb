@@ -1,0 +1,238 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    
+    <asp:ContentPlaceHolder id="head" runat="server">
+        <title></title>
+    </asp:ContentPlaceHolder>
+    <script src="JavaScript.js"></script>
+    <link  href="StyleSheet.css" rel="stylesheet"  />
+    <link rel="stylesheet" href="fontAwsome/css/font-awesome.css" />
+    <link rel="shortcut icon" href="img/testbed_protocol.png" /> 
+</head>
+
+<body>
+    <form id="form1" runat="server">
+    <div> <%--Main div--%>
+    <div id="allpage">
+
+        <%-----------------------------------------------------------------Header--%>
+
+        <div id="header"> 
+            <div id="header1"> </div>
+            <div id="header2"></div>
+            <div id="header3">
+			    <div class="cmp">
+				    <div class="cmpname"> 
+					    گروه مهندسی هوش مصنوعی ایلیا  <br>
+					    تولید کننده سیستم های  تحت ویندوز
+					    وب
+					    وموبایل
+                        <br />
+                        وسخت افزار
+				    </div> <%--cmpname--%>
+				    <div class="cmpimg">
+					    <a href="Default.aspx"><img alt="" src="img/2-p1.jpg" /></a>
+                        <br />
+				    </div> <%--cmpimg--%>
+			    </div> <%--cmp--%>
+			    <div class="menu">
+				    <a href="Default.aspx" title="صفحه نخست" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('r1','','img/b1a.jpg',1)"><img src="img/b1a.jpg"alt="" id="r1" /></a>
+				    <a href="upload.aspx" title="آپلودسنتر" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('r2','','img/b2a.jpg',1)"><img src="img/b2.jpg" alt="" id="r2" /></a>
+				    <a href="Default.aspx" title="ثبت نام" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('r3','','img/b3a.jpg',1)"><img src="img/b3.jpg" alt="" id="r3" /></a>
+				    <a href="Admin/Admin_Default.aspx" title="پنل مدیریت" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('r4','','img/b4a.jpg',1)"><img src="img/b4.jpg" alt="" id="r4" /></a>
+				    <a href="Default.aspx" title="درباره ما" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('r5','','img/b5a.jpg',1)"><img src="img/b5.jpg" alt="" id="r5" /></a>
+				    <a href="contact.aspx" title="تماس باما" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('r6','','img/b6a.jpg',1)"><img src="img/b6.jpg" alt="" id="r6" /></a>
+				    <br />
+			    </div> <%--menu--%>
+            </div> <%--header3--%>
+        </div> <%--header--%>
+
+
+        <%-----------------------------------------------------------------Badane--%>
+
+        <div id="bdn">
+
+
+            <div id="bdnr">
+                <div class="bdnrb"><h6>جستجو</h6></div>
+                <%--<div class="bdnrb"><h4></h4></div>--%>
+                <div class="bdnrv">
+                    <asp:TextBox Style="border-radius:5px" ID="txt_search" runat="server" Width="84%"></asp:TextBox>
+                    <asp:Button ID="btn_search" runat="server" Text="ok" Width="10%" OnClick="btn_search_Click" />
+                </div>
+                <%--<div class="bdnrp"></div>--%>
+
+
+                <%--<div class="bdnrb"><h4>پنل کاربری</h4></div>--%>
+                <div class="bdnrb"><h4></h4></div>
+                <div class="bdnrv" style="font-family:Tahoma; font-size:12px;">
+                    <%--<center>--%>
+                    <table style="margin:0 auto">
+                        <tr>
+                            <td>
+                                سلام
+                                <%--<asp:LoginName ID="LoginName1" runat="server" />--%>
+                                خوش آمدید
+                                <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+                                <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                                    <ContentTemplate>
+                                        امروز<asp:Label ID="lbl_time" runat="server"></asp:Label>
+                                        <asp:Timer ID="Timer1" runat="server" Interval="1000" OnTick="Timer1_Tick"></asp:Timer>
+                                        <br />
+                                    </ContentTemplate>
+                                </asp:UpdatePanel>
+                                <asp:Label ID="lbl_bazdid" runat="server"></asp:Label>
+                            </td>
+                        </tr>
+                    </table>
+                    <%--</center>--%>
+                </div>
+                <div class="bdnrp"></div>
+
+
+                <div class="bdnrb"><h4>موضوعات</h4></div>
+                <div class="bdnrv">
+                    <center>
+                    <asp:DataList ID="DataList1" runat="server" DataSourceID="ObjectDataSource1">
+                        <ItemTemplate>
+                            <a href="<%# Eval("catid","showcat.aspx?cid={0}") %>" title="<%# Eval("catname") %>"  target="_blank" ><%# Eval("catname") %></a>
+                        </ItemTemplate>
+                    </asp:DataList>
+                    <asp:ObjectDataSource runat="server" ID="ObjectDataSource1" 
+                        OldValuesParameterFormatString="original_{0}" SelectMethod="GetDataAllcategory" 
+                        TypeName="DataSet_categoryTableAdapters.categoryTableAdapter">
+                    </asp:ObjectDataSource>
+                    </center>
+                </div>
+                <div class="bdnrp"></div>
+
+
+                <br />
+
+                <br />
+
+                <div class="bdnrb"><h4>پیوندها</h4></div>
+                <div class="bdnrv">
+                    <center>
+                    <asp:DataList ID="DataList2" runat="server" DataSourceID="ObjectDataSource2">
+                        <ItemTemplate>
+                            <a href="<%# Eval("linkurl") %>" title="<%# Eval("linkdesc") %>"  target="_blank" ><%# Eval("linkname") %></a>
+                        </ItemTemplate>
+                    </asp:DataList>
+                    <asp:ObjectDataSource ID="ObjectDataSource2" runat="server" 
+                        OldValuesParameterFormatString="original_{0}" SelectMethod="GetDataAllLink" 
+                        TypeName="DataSet_linkTableAdapters.tbl_linkTableAdapter">
+                    </asp:ObjectDataSource>
+                    </center>
+                </div>
+                <div class="bdnrp"></div>
+
+
+                <br />
+
+                <div class="bdnrb"><h4>چت روم</h4></div>
+                <div class="bdnrv">
+                    <div style="overflow:auto; width:auto; height:300px;" dir="rtl">
+                        <asp:DataList ID="DataList_Chat" runat="server" DataSourceID="ObjectDataSource_Chat">
+                            <ItemTemplate>
+
+                                <%--</asp:Label>--%>
+                                <font face="Tahoma" color="black" size="1"><asp:Label ID="chatuserlable" runat="server" Text='<%# Eval("chatuser") %>'/> : 
+
+                                </font><font face="Tahoma" color="silver" size="1"><asp:Label ID="chattextlable" runat="server" Text='<%# Eval("chattext") %>'/></font>
+                                
+                                <%--</asp:Label>--%>
+                                
+                                <br />
+
+
+                            </ItemTemplate>
+                        </asp:DataList>
+                        <asp:ObjectDataSource runat="server" ID="ObjectDataSource_Chat" 
+                            OldValuesParameterFormatString="original_{0}" SelectMethod="GetDataAllChat" 
+                            TypeName="DataSet_chatTableAdapters.tbl_chatTableAdapter"></asp:ObjectDataSource>
+                        <br />
+                    </div>
+
+                    <table dir="rtl">
+
+                        <tr>
+                            <td>نام:</td>
+                            <td><asp:TextBox ID="txt_username" runat="server"></asp:TextBox></td>
+                        </tr>
+
+                        <tr>
+                            <td>متن:</td>
+                            <td><asp:TextBox ID="txt_text" runat="server" Height="100px" TextMode="MultiLine"></asp:TextBox></td>
+                        </tr>
+
+                        <tr>
+                            <td><asp:Button ID="btn_chat" runat="server" Text="ارسال" OnClick="btn_chat_Click"  /></td>
+                        </tr>
+                    </table>
+
+                </div>
+                <div class="bdnrp"></div>
+            </div> <%--bdnr--%>
+
+
+
+            <div id="bdnl">
+
+<%--                <div class="bdnlb">bbb</div>
+                <div class="bdnlv">vvv</div>
+                <div class="bdnlp">ppp</div>--%>
+
+
+
+                    <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+                    </asp:ContentPlaceHolder>
+
+
+
+            </div> <%--bdnl--%>
+            
+        </div> <%--bdn--%>
+
+
+        <%-----------------------------------------------------------------Footer--%>
+
+
+        <div id="footer">
+
+            <div id="footermnu">
+                <ul>
+                    <li><a href="#">خانه</a></li>
+                    <li><a href="#">تبلیغات</a></li>
+                    <li><a href="#">درباره ما</a></li>
+                    <li><a href="#">تماس با ما</a></li>
+                </ul>
+            </div> <%--footermnu--%>
+
+            <div id="icon">
+                <ul>
+                    <li><a href="#" style="color:#0094ff"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+                    <li><a href="#" style="color:#091cf3"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    <li><a href="#" style="color:#28cc21"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+                    <li><a href="#" style="color:#ff0000"><i class="fa fa-youtube-square" aria-hidden="true"></i></a></li>
+                </ul>
+                <p>کلیه حقوق مادی و معنوی سایت متعلق به هوش مصنوعی ایلیا میباشد</p>
+            </div> <%--icon--%>
+            
+        </div> <%--footer--%>
+
+
+    </div> <%--allpage--%>
+
+
+
+
+    </div> <%--Main div--%>
+    </form>
+</body>
+</html>
