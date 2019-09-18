@@ -1,0 +1,152 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Admin_MasterPage.master.cs" Inherits="Admin_Admin_MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <%--<script src="../JavaScript.js"></script>--%>
+    <link  href="../StyleSheet.css" rel="stylesheet"  />
+    <link rel="stylesheet" href="../fontAwsome/css/font-awesome.css" />
+    <link rel="shortcut icon" href="../img/testbed_protocol.png" /> 
+</head>
+
+<body>
+
+
+
+    <form id="form1" runat="server">
+    <div> <%--Main div--%>
+    <div id="allpage">
+
+        <%-----------------------------------------------------------------Header--%>
+
+        <div id="header"> 
+            <div id="header1"> </div>
+            <div id="header2"></div>
+            <div id="header3">
+			    <div class="cmp">
+				    <div class="cmpname"> 
+					    گروه مهندسی هوش مصنوعی ایلیا  <br>
+					    تولید کننده سیستم های  تحت ویندوز
+					    وب
+					    وموبایل
+                        <br />
+                        وسخت افزار
+				    </div> <%--cmpname--%>
+				    <div class="cmpimg">
+					    <a href="Default.aspx"><img alt="" src="../img/2-p1.jpg" /></a>
+                        <br />
+				    </div> <%--cmpimg--%>
+			    </div> <%--cmp--%>
+            </div> <%--header3--%>
+        </div> <%--header--%>
+
+
+        <%-----------------------------------------------------------------Badane--%>
+
+        <div id="bdn">
+
+
+<%--            <div id="bdnr">
+                <div class="bdnrb">موضوعات</div>
+                <div class="bdnrv">
+                    <center>
+                    <asp:DataList ID="DataList1" runat="server" DataSourceID="ObjectDataSource1">
+                        <ItemTemplate>
+                            <a href="<%# Eval("catid","showcat.aspx?cid={0}") %>" title="<%# Eval("catname") %>"  target="_blank" ><%# Eval("catname") %></a>
+                        </ItemTemplate>
+                    </asp:DataList>
+                    <asp:ObjectDataSource runat="server" ID="ObjectDataSource1" 
+                        OldValuesParameterFormatString="original_{0}" SelectMethod="GetDataAllcategory" 
+                        TypeName="DataSet_categoryTableAdapters.categoryTableAdapter">
+                    </asp:ObjectDataSource>
+                    </center>
+                </div>
+                <div class="bdnrp"></div>
+                <br />
+                <div class="bdnrb">bbb</div>
+                <div class="bdnrv">vvv<br />vvv<br />vvv</div>
+                <div class="bdnrp"></div>
+                <br />
+                <div class="bdnrb">bbb</div>
+                <div class="bdnrv">vvv<br />vvv<br />vvv<br />vvv<br />vvv<br />vvv<br />vvv<br />vvv<br />vvv<br />vvv<br />vvv</div>
+                <div class="bdnrp"></div>
+            </div> <%--bdnr--%>
+
+
+
+<%--            <div id="bdnl">
+                <div class="bdnlb">bbb</div>
+                <div class="bdnlv">vvvvvvvvvv</div>
+                <div class="bdnlp"></div>
+            </div> <%--bdnl--%>--%>--%>
+            
+
+
+
+
+    <%--<center>
+
+        <asp:LoginStatus ID="LoginStatus1" runat="server" LogoutText="خروج از پنل مدیریت" ForeColor="Black" />
+
+       به صفحه مدیریت خوش آمدید <asp:LoginName ID="LoginName1" runat="server" ForeColor="Black"></asp:LoginName> سلام
+
+    </center>--%>
+
+
+
+
+    <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+    </asp:ContentPlaceHolder>
+
+
+
+
+
+
+
+
+
+        </div> <%--bdn--%>
+
+
+        <%-----------------------------------------------------------------Footer--%>
+
+
+        <div id="footer">
+
+            <div id="footermnu">
+                <ul>
+                    <li><a href="#">خانه</a></li>
+                    <li><a href="#">تبلیغات</a></li>
+                    <li><a href="#">درباره ما</a></li>
+                    <li><a href="#">تماس با ما</a></li>
+                </ul>
+            </div> <%--footermnu--%>
+
+            <div id="icon">
+                <ul>
+                    <li><a href="#" style="color:#0094ff"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+                    <li><a href="#" style="color:#091cf3"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    <li><a href="#" style="color:#28cc21"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+                    <li><a href="#" style="color:#ff0000"><i class="fa fa-youtube-square" aria-hidden="true"></i></a></li>
+                </ul>
+                <p>کلیه حقوق مادی و معنوی سایت متعلق به رویش اندیشه ایلیا میباشد</p>
+            </div> <%--icon--%>
+            
+        </div> <%--footer--%>
+
+
+    </div> <%--allpage--%>
+
+
+
+
+    </div> <%--Main div--%>
+    </form>
+</body>
+</html>
